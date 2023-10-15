@@ -1,0 +1,18 @@
+- Template Literals are better to use as compared to conventional strings because normal strings can get very ugly.
+
+let word1 = 'Dylan';
+let word2 = 'Israel';
+let num1 = 2;
+let num2 = 3;
+
+const fullName = `${num1 + num2} ${word2}`;
+
+console.log(fullName);
+
+OUTPUT: 5 Dylan Israel.
+
+A Very Clean way to have multi-line strings:
+
+let example = `${word1}
+${word2}
+`;
