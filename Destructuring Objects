@@ -1,0 +1,36 @@
+//An object 
+const player = {
+  name: 'Lebron James',
+  club: 'LA Lakers',
+  address: {
+    city: 'Los Angeles'
+  }
+};
+
+//How we accesss elements from this object.
+console.log( player.club );
+
+//
+const player = {
+  name: 'Lebron James',
+  club: 'LA Lakers',
+  address: {
+    city: 'Los Angeles'
+  }
+};
+
+console.log( player.address.city );
+
+Extremely long values that we need to input here .
+
+//Destructuring:
+const { name, club } = player;
+
+console.log(`${name} plays for ${club}`);
+This here is destructuring.
+
+// Accesssing a value within a value:
+
+
+const { name, club, address: { city } } = player;
+console.log(`${name} lives in ${city}`);
