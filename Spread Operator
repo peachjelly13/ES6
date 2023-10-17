@@ -1,0 +1,49 @@
+// Making a copy:
+
+let contacts = ["Mary", "Joel", "Danny"];
+
+let personalFriends = contacts;
+
+console.log(personalFriends);
+
+contacts.push('john');
+
+// let personalFriends = contacts; This here is creating a refernce to the contacts array , it is not a new array.
+
+/// The spread operator:
+
+let contacts = ["Mary", "Joel", "Danny"];
+
+let personalFriends = [ ...contacts ]; -> Look here specifically
+
+contacts.push("John");
+
+console.log(personalFriends);
+
+
+//
+let contacts = ["Mary", "Joel", "Danny"];
+
+let personalFriends = [ "David", ...contacts, "Lily" ];
+
+contacts.push("John");
+
+console.log(personalFriends);
+
+//FOR OBJECTS
+
+->Spread operator for objects:
+
+let person = {
+    name: "Adam",
+    age: 25,
+    city: "Manchester"
+}
+
+let employee = {
+    ...person,
+    salary: 50000,
+    position: "Software Developer"
+}
+
+console.log(employee);
