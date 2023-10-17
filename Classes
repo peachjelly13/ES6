@@ -1,0 +1,132 @@
+Classes in javascript make it object-oriented language
+- build an instance of a class
+- create a constructor 
+
+class Animal {
+    constructor(type, legs) {
+        this.type = type;
+        this.legs = legs;
+    }
+}
+
+// Using export and import 
+
+export class Animal {
+    constructor(type, legs) {
+        this.type = type;
+        this.legs = legs;
+    }
+}
+
+
+import { Animal } from './animal.js';
+let cat = new Animal('Cat', 4);
+cat.legs = 3;
+console.log(cat.legs)
+
+// See how we use a default param:
+
+export class Animal {
+    constructor(type, legs) {
+        this.type = type;
+        this.legs = legs;
+    }
+    
+    makeNoise(sound = 'Loud Noise') {
+        console.log(sound);
+    }
+}
+import { Animal } from './animal.js';
+
+let cat = new Animal('Cat', 4);
+
+cat.legs = 3;
+cat.makeNoise('Meow');
+console.log(cat.legs)
+
+//NEWWW VALUEE
+
+import { Animal } from './animal.js';
+let cat = new Animal('Cat', 4);
+cat.legs = 3;
+cat.makeNoise('Meow');
+console.log(cat.legs)
+
+
+import { Animal } from './animal.js';
+console.log(Animal.return10());
+
+// 
+
+
+export class Animal {
+    constructor(type, legs) {
+        this.type = type;
+        this.legs = legs;
+    }
+    
+    makeNoise(sound = 'Loud Noise') {
+        console.log(sound);
+    }
+    
+    get metaData() {
+        return `Type: ${this.type}, Legs: ${this.legs}`
+    }
+    
+    static return10() {
+        return 10;
+    }
+}
+
+import { Animal } from './animal.js';
+
+let cat = new Animal('Cat', 4);
+
+console.log(cat.metaData)
+
+//
+INSTEAD OF REPITION WE DO THIS INSTEAD 
+
+export class Cat extends Animal {
+    constructor(type, legs, tail) {
+        super(type, legs);
+        this.tail = tail;
+    }
+}
+
+
+//Extending a class from another class
+
+export class Animal {
+    constructor(type, legs) {
+        this.type = type;
+        this.legs = legs;
+    }
+    
+    makeNoise(sound = 'Loud Noise') {
+        console.log(sound);
+    }
+    
+    get metaData() {
+        return `Type: ${this.type}, Legs: ${this.legs}`;
+    }
+    
+    static return10() {
+        return 10;
+    }
+}
+
+export class Cat extends Animal {
+    makeNoise(sound = "meow") {
+        console.log(sound);
+    }
+}
+
+
+import { Animal, Cat } from './animal.js';
+
+let cat = new Cat('Cat', 4);
+
+cat.makeNoise();
+
+console.log(cat.metaData)
