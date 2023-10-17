@@ -19,3 +19,14 @@ let fullName = "Dylan Coding God Israel";
 for (const char of fullName) {
     console.log(char);
 }
+
+// Challenge FOR of Loop:
+
+const students = [ 
+    { name: "John", city: "New York" },
+    { name: "Peter", city: "Paris"},
+    { name: "Kate", city: "Sidney" }
+]
+for(const student of students){
+    console.log(`${student.name} in ${student.city}`)
+}
