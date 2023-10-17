@@ -1,0 +1,25 @@
+// Arrow Function 
+
+const dinnerMenu = () => {
+    return "I'm going to eat a burger for dinner";
+}
+
+console.log( dinnerMenu() );
+
+//Example 2
+
+const dinnerMenu = (food) => {
+    return `I'm going to eat a ${food} for dinner`;
+}
+
+console.log( dinnerMenu("chicken salad") );
+
+// Automatically returns a value
+
+const dinnerMenu = (food) => `I'm going to eat a ${food} for dinner`;
+
+console.log( dinnerMenu("chicken salad") );
+
+const dinnerMenu = food => `I'm going to eat a ${food} for dinner`;
+
+console.log( dinnerMenu("chicken salad") );
