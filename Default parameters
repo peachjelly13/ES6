@@ -12,3 +12,13 @@ const leadSinger = (artist = "someone") => {
 }
 
 leadSinger();
+
+
+//It is very important to call that function :
+
+
+function foodshopping( food = "something") {
+    console.log(`I'm going to buy ${food} from the grocery shop`);
+}
+
+foodShopping();
