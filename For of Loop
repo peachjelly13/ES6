@@ -1,0 +1,21 @@
+// What is a FOR Of loop and why is it used
+
+let incomes = [62000, 67000, 75000];
+let total = 0;
+
+for (const income of incomes) {
+    console.log(income);
+    total += income;
+}
+
+// console.log(total);
+
+Using A FOR of loop for strings:
+
+
+let fullName = "Dylan Coding God Israel";
+
+
+for (const char of fullName) {
+    console.log(char);
+}
