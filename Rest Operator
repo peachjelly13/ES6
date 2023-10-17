@@ -1,0 +1,8 @@
+- If you do not know how many values you need to pass 
+Then we use the rest operator:
+function add(...nums) {
+    
+    console.log(nums);
+}
+
+add(4, 5, 7, 8, 12)
