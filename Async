@@ -1,0 +1,41 @@
+//A synchronus function
+
+const photos = [];
+
+function photoUpload() {
+    let uploadStatus = new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            photos.push("Profile Pic");
+            resolve("Photo Uploaded")
+        }, 3000)
+    })
+    
+    let result = uploadStatus;
+    
+    console.log(result);
+    console.log(photos.length);
+}
+
+photoUpload();
+
+The problem here is that the three seconds havent even yet been completed and the next part is already running.
+So we solve this using async 
+We will await for the promise before going to the next line:
+
+const photos = [];
+
+async function photoUpload() {
+    let uploadStatus = new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            photos.push("Profile Pic");
+            resolve("Photo Uploaded")
+        }, 3000)
+    })
+    
+    let result = await uploadStatus;
+    
+    console.log(result);
+    console.log(photos.length);
+}
+
+photoUpload();
